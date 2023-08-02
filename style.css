@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "a";
+    box-sizing: border-box;
+}
+
+head, body{
+
+}
+
+@font-face {
+    font-family: a;
+    src: url(./Poppins-SemiBold.ttf);
+}
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    
+    color: white;
+    position: relative;
+}
+
+video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed
+}
+
+.container{
+    width: 800px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock{
+    width: 100%;
+    height: 100%;
+    background: rgba(234, 0, 255, 0.232);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 10px;
+    outline: 1px solid rgba(0, 0, 0, 0.386);
+    backdrop-filter: blur(20px);
+}
+
+.container::before{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background-color: #F15B25;
+    outline: 1px solid black;
+    border-radius: 5px;
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    z-index: -1;
+}
+
+.container::after{
+    content: '';
+    width: 180px;
+    height: 180px;
+    outline: 1px solid black;
+    background-color: #006934;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -60px;
+    right: -60px;
+    z-index: -1;
+}
+
+.clock span{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.clock span::after{
+    font-size: 16px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hrs::after{
+    content: 'HOURS';
+}
+
+#mins::after{
+    content: 'MINS';
+}
+
+#secs::after{
+    content: 'SEC';
+}
